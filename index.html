@@ -8,161 +8,230 @@
 
 <style>
 
+/* =========================
+   BASE
+========================= */
 body{
   margin:0;
-  font-family:Arial;
-  background:#020617;
+  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Arial;
+  background: radial-gradient(circle at top, #0b1220, #020617);
   color:white;
 }
 
-/* HEADER */
+/* =========================
+   HEADER (BRAND IDENTITY)
+========================= */
 header{
   text-align:center;
-  padding:20px;
-  background:#000;
-  border-bottom:3px solid #00aaff;
+  padding:26px 15px;
+  background:rgba(0,0,0,0.65);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
-h1{
-  margin:0;
-  color:#00aaff;
-  text-shadow:0 0 10px rgba(0,170,255,0.7);
+/* LOGO AREA */
+.logo{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  font-size:22px;
+  font-weight:700;
+  color:#5cc8ff;
+  letter-spacing:1px;
 }
 
-/* HERO */
+/* simple icon placeholder */
+.logo-box{
+  width:28px;
+  height:28px;
+  border-radius:8px;
+  background:linear-gradient(145deg,#00aaff,#0055ff);
+  box-shadow:0 0 15px rgba(0,170,255,0.4);
+}
+
+.sub{
+  font-size:13px;
+  color:rgba(255,255,255,0.6);
+  margin-top:6px;
+}
+
+/* =========================
+   HERO
+========================= */
 .hero{
   text-align:center;
-  padding:30px 15px;
+  padding:28px 15px;
 }
 
+.hero h2{
+  margin:10px 0;
+  font-weight:600;
+}
+
+.hero p{
+  color:rgba(255,255,255,0.6);
+}
+
+/* CTA BUTTONS */
 .btn{
   display:inline-block;
-  padding:12px 20px;
-  margin:10px;
-  border-radius:10px;
+  padding:12px 18px;
+  margin:8px;
+  border-radius:14px;
+  font-weight:600;
   text-decoration:none;
-  font-weight:bold;
 }
 
 .call{
-  background:linear-gradient(145deg,#00aaff,#0055ff);
-  color:white;
-  box-shadow:0 5px 12px rgba(0,0,0,0.6);
+  background:rgba(0,170,255,0.18);
+  border:1px solid rgba(0,170,255,0.5);
+  color:#5cc8ff;
 }
 
 .whatsapp{
-  background:#25D366;
-  color:white;
+  background:rgba(37,211,102,0.18);
+  border:1px solid rgba(37,211,102,0.5);
+  color:#25d366;
 }
 
-/* GRID */
+/* =========================
+   TRUST STRIP
+========================= */
+.trust{
+  display:flex;
+  justify-content:space-around;
+  padding:14px;
+  margin:10px;
+  border-radius:16px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
+  text-align:center;
+}
+
+.trust div{
+  font-size:11px;
+  color:rgba(255,255,255,0.7);
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+.section-title{
+  text-align:center;
+  margin:20px 0 10px;
+  font-size:16px;
+  color:#7dd3ff;
+}
+
+/* =========================
+   GRID SERVICES
+========================= */
 .grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
-  gap:18px;
-  padding:20px;
+  gap:14px;
+  padding:16px;
 }
 
-/* ===== 3D BUTTON CARDS ===== */
+/* =========================
+   SERVICE CARD (BRAND STYLE)
+========================= */
 .card{
   position:relative;
-  background:linear-gradient(145deg,#0a0f1f,#020617);
-  border-radius:18px;
+  border-radius:22px;
   overflow:hidden;
   text-decoration:none;
   color:white;
 
-  /* OUTLINE */
-  border:2px solid rgba(0,170,255,0.4);
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(14px);
 
-  /* REAL BUTTON DEPTH */
-  box-shadow:
-    0 8px 0 #001a33,
-    0 12px 20px rgba(0,0,0,0.8),
-    inset 0 2px 3px rgba(255,255,255,0.2),
-    inset 0 -3px 6px rgba(0,0,0,0.7);
+  border:1px solid rgba(255,255,255,0.08);
 
-  transition:all 0.15s ease;
+  box-shadow:0 10px 30px rgba(0,0,0,0.6);
+
+  transition:0.2s ease;
 }
 
-/* GLOSS */
-.card::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  height:50%;
-  background:linear-gradient(
-    to bottom,
-    rgba(255,255,255,0.25),
-    rgba(255,255,255,0.05),
-    transparent
-  );
-}
-
-/* GLOW EDGE */
-.card::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  border-radius:18px;
-  box-shadow:0 0 12px rgba(0,170,255,0.4);
-}
-
-/* IMAGE */
 .card img{
   width:100%;
-  height:130px;
+  height:110px;
   object-fit:cover;
-  opacity:0.9;
 }
 
-/* CONTENT */
 .card-content{
   padding:12px;
 }
 
-/* TITLE */
 .card h3{
   margin:0;
-  color:#00aaff;
-  text-shadow:0 0 8px rgba(0,170,255,0.6);
+  font-size:14px;
+  font-weight:600;
+  color:#7dd3ff;
 }
 
-/* TEXT */
 .card p{
-  font-size:13px;
-  color:#bbb;
+  margin:6px 0 0;
+  font-size:12px;
+  color:rgba(255,255,255,0.65);
 }
 
-/* PRICE */
 .price{
   display:inline-block;
-  margin-top:8px;
-  background:linear-gradient(145deg,#00aaff,#0055ff);
-  padding:6px 10px;
-  border-radius:8px;
-  font-weight:bold;
-  box-shadow:0 3px 8px rgba(0,0,0,0.6);
+  margin-top:10px;
+  font-size:11px;
+  font-weight:600;
+  padding:5px 9px;
+  border-radius:10px;
+  background:rgba(0,170,255,0.15);
+  border:1px solid rgba(0,170,255,0.4);
+  color:#5cc8ff;
 }
 
 /* HOVER */
 .card:hover{
-  transform:translateY(-3px);
+  transform:scale(1.03);
 }
 
-/* PRESS EFFECT */
-.card:active{
-  transform:translateY(4px);
-
-  box-shadow:
-    0 2px 0 #001a33,
-    0 5px 10px rgba(0,0,0,0.8),
-    inset 0 2px 6px rgba(0,0,0,0.9);
+/* =========================
+   ABOUT SECTION
+========================= */
+.about{
+  padding:18px;
+  text-align:center;
 }
 
-/* STICKY BAR */
+.about-box{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:16px;
+  padding:14px;
+  color:rgba(255,255,255,0.7);
+  font-size:13px;
+}
+
+/* =========================
+   TESTIMONIALS
+========================= */
+.testimonials{
+  padding:18px;
+}
+
+.quote{
+  margin:10px 0;
+  padding:12px;
+  border-radius:14px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  font-size:13px;
+  color:rgba(255,255,255,0.7);
+}
+
+/* =========================
+   FOOTER CTA BAR
+========================= */
 .sticky{
   position:fixed;
   bottom:0;
@@ -170,14 +239,17 @@ h1{
   right:0;
   display:flex;
   justify-content:space-around;
-  background:#000;
-  padding:10px;
+  padding:12px;
+  background:rgba(0,0,0,0.75);
+  backdrop-filter:blur(10px);
+  border-top:1px solid rgba(255,255,255,0.08);
 }
 
 .sticky a{
   color:white;
   text-decoration:none;
-  font-weight:bold;
+  font-weight:600;
+  font-size:13px;
 }
 
 </style>
@@ -186,16 +258,28 @@ h1{
 <body>
 
 <header>
-  <h1>Sperin Services</h1>
+  <div class="logo">
+    <div class="logo-box"></div>
+    Sperin Services
+  </div>
+  <div class="sub">Electrician • West Midlands • Fully Qualified & Insured</div>
 </header>
 
 <section class="hero">
-  <h2>Electrician West Midlands</h2>
-  <p>Fast • Reliable • Fully Qualified</p>
+  <h2>Trusted Electrical Contractor</h2>
+  <p>Professional work. Clean finish. Reliable service.</p>
 
   <a class="btn call" href="tel:07817360156">📞 Call Now</a>
   <a class="btn whatsapp" href="https://wa.me/447817360156">💬 WhatsApp</a>
 </section>
+
+<section class="trust">
+  <div>⚡ Qualified</div>
+  <div>🛡️ Insured</div>
+  <div>📍 Local</div>
+</section>
+
+<div class="section-title">Our Services</div>
 
 <section class="grid">
 
@@ -212,7 +296,7 @@ h1{
   <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea">
   <div class="card-content">
     <h3>Rewires</h3>
-    <p>Full & partial rewiring</p>
+    <p>Full property rewires</p>
     <span class="price">FROM £3000</span>
   </div>
 </a>
@@ -220,8 +304,8 @@ h1{
 <a href="ev.html" class="card">
   <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399">
   <div class="card-content">
-    <h3>EV Chargers</h3>
-    <p>Home charging install</p>
+    <h3>EV Charging</h3>
+    <p>Home charger installs</p>
     <span class="price">FROM £800</span>
   </div>
 </a>
@@ -230,7 +314,7 @@ h1{
   <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1">
   <div class="card-content">
     <h3>Kitchens</h3>
-    <p>Electrical installs</p>
+    <p>Full electrical installs</p>
     <span class="price">FROM £5000</span>
   </div>
 </a>
@@ -239,7 +323,7 @@ h1{
   <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a">
   <div class="card-content">
     <h3>Bathrooms</h3>
-    <p>Safe bathroom electrics</p>
+    <p>Safe electrical work</p>
     <span class="price">FROM £3500</span>
   </div>
 </a>
@@ -247,12 +331,28 @@ h1{
 <a href="eicr.html" class="card">
   <img src="https://images.unsplash.com/photo-1581090700227-4c4d8d45b6b2">
   <div class="card-content">
-    <h3>EICR</h3>
-    <p>Electrical reports</p>
+    <h3>EICR Reports</h3>
+    <p>Electrical certification</p>
     <span class="price">FROM £120</span>
   </div>
 </a>
 
+</section>
+
+<div class="section-title">About Us</div>
+
+<section class="about">
+  <div class="about-box">
+    Sperin Services provides reliable domestic electrical work across the West Midlands. 
+    We focus on safe installations, clean finishes, and honest pricing.
+  </div>
+</section>
+
+<div class="section-title">Customer Feedback</div>
+
+<section class="testimonials">
+  <div class="quote">“Turned up on time, very professional and clean work.”</div>
+  <div class="quote">“Great service, would definitely recommend.”</div>
 </section>
 
 <div class="sticky">
