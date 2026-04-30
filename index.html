@@ -63,21 +63,26 @@ h1{
   padding:20px;
 }
 
-/* CARD = 3D BUTTON */
+/* ===== 3D BUTTON CARDS ===== */
 .card{
   position:relative;
-  background:linear-gradient(145deg,#0f172a,#020617);
+  background:linear-gradient(145deg,#0a0f1f,#020617);
   border-radius:18px;
   overflow:hidden;
   text-decoration:none;
   color:white;
 
-  box-shadow:
-    0 6px 15px rgba(0,0,0,0.6),
-    inset 0 1px 0 rgba(255,255,255,0.1),
-    inset 0 -2px 5px rgba(0,0,0,0.6);
+  /* OUTLINE */
+  border:2px solid rgba(0,170,255,0.4);
 
-  transition:0.25s;
+  /* REAL BUTTON DEPTH */
+  box-shadow:
+    0 8px 0 #001a33,
+    0 12px 20px rgba(0,0,0,0.8),
+    inset 0 2px 3px rgba(255,255,255,0.2),
+    inset 0 -3px 6px rgba(0,0,0,0.7);
+
+  transition:all 0.15s ease;
 }
 
 /* GLOSS */
@@ -94,6 +99,15 @@ h1{
     rgba(255,255,255,0.05),
     transparent
   );
+}
+
+/* GLOW EDGE */
+.card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:18px;
+  box-shadow:0 0 12px rgba(0,170,255,0.4);
 }
 
 /* IMAGE */
@@ -134,12 +148,18 @@ h1{
 }
 
 /* HOVER */
-.card:hover,
+.card:hover{
+  transform:translateY(-3px);
+}
+
+/* PRESS EFFECT */
 .card:active{
-  transform:translateY(-5px) scale(1.03);
+  transform:translateY(4px);
+
   box-shadow:
-    0 12px 25px rgba(0,0,0,0.8),
-    0 0 20px rgba(0,170,255,0.4);
+    0 2px 0 #001a33,
+    0 5px 10px rgba(0,0,0,0.8),
+    inset 0 2px 6px rgba(0,0,0,0.9);
 }
 
 /* STICKY BAR */
