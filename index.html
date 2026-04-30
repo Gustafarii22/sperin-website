@@ -19,7 +19,7 @@ body{
 }
 
 /* =========================
-   HEADER / BRAND
+   HEADER
 ========================= */
 header{
   text-align:center;
@@ -60,7 +60,7 @@ header{
 }
 
 /* =========================
-   TOP ACTION BUTTONS
+   BUTTONS
 ========================= */
 .btn{
   display:inline-block;
@@ -75,7 +75,6 @@ header{
   background:rgba(0,170,255,0.18);
   border:1px solid rgba(0,170,255,0.5);
   color:#5cc8ff;
-  backdrop-filter:blur(10px);
 }
 
 .whatsapp{
@@ -105,7 +104,7 @@ header{
 }
 
 /* =========================
-   SERVICES GRID
+   GRID
 ========================= */
 .grid{
   display:grid;
@@ -115,7 +114,7 @@ header{
 }
 
 /* =========================
-   APP TILE (UPGRADED GLASS + GLOW)
+   🌟 FINAL APP-STYLE TILE SYSTEM
 ========================= */
 .card{
   position:relative;
@@ -129,21 +128,20 @@ header{
 
   border:1px solid rgba(255,255,255,0.08);
 
-  box-shadow:
-    0 10px 25px rgba(0,0,0,0.6);
+  box-shadow:0 10px 25px rgba(0,0,0,0.6);
 
   transition:0.25s ease;
 }
 
-/* IMAGE */
+/* image */
 .card img{
   width:100%;
   height:115px;
   object-fit:cover;
-  filter:saturate(1.1) contrast(1.05);
+  filter:contrast(1.05) saturate(1.1);
 }
 
-/* CONTENT */
+/* content */
 .card-content{
   padding:12px;
 }
@@ -174,19 +172,20 @@ header{
 }
 
 /* =========================
-   🔥 APPLE-STYLE GLOW SYSTEM (NEW)
+   🔥 PERMANENT GLOW (KEY FIX)
 ========================= */
 .card::before{
   content:"";
   position:absolute;
-  inset:-2px;
-  border-radius:24px;
-  opacity:0;
-  transition:0.25s ease;
-  filter:blur(12px);
+  inset:0;
+  border-radius:22px;
+  pointer-events:none;
+
+  opacity:0.65; /* ALWAYS ON */
+  filter:blur(20px);
 }
 
-/* Individual glow colours */
+/* glow colours */
 .card:nth-child(1)::before{ background:rgba(0,170,255,0.35); }
 .card:nth-child(2)::before{ background:rgba(170,90,255,0.35); }
 .card:nth-child(3)::before{ background:rgba(0,255,170,0.25); }
@@ -194,19 +193,24 @@ header{
 .card:nth-child(5)::before{ background:rgba(0,220,255,0.25); }
 .card:nth-child(6)::before{ background:rgba(255,220,0,0.25); }
 
-/* hover glow activation */
-.card:hover::before{
-  opacity:1;
-}
-
-/* lift effect */
+/* =========================
+   HOVER EFFECT
+========================= */
 .card:hover{
   transform:translateY(-4px) scale(1.03);
-  box-shadow:0 15px 40px rgba(0,0,0,0.8);
 }
 
+.card:hover::before{
+  opacity:1;
+  filter:blur(25px);
+}
+
+/* =========================
+   CLICK / PRESS EFFECT
+========================= */
 .card:active{
-  transform:scale(0.97);
+  transform:translateY(3px) scale(0.98);
+  box-shadow:0 4px 10px rgba(0,0,0,0.8);
 }
 
 /* =========================
@@ -273,9 +277,9 @@ header{
 </section>
 
 <section class="trust">
-  <div>⚡ Qualified Electrician</div>
-  <div>🛡️ Insured Work</div>
-  <div>📍 Local & Trusted</div>
+  <div>⚡ Qualified</div>
+  <div>🛡️ Insured</div>
+  <div>📍 Local</div>
 </section>
 
 <section class="grid">
@@ -302,7 +306,7 @@ header{
   <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399">
   <div class="card-content">
     <h3>EV Charging</h3>
-    <p>Home charger installs</p>
+    <p>Home installs</p>
     <span class="price">FROM £800</span>
   </div>
 </a>
@@ -311,7 +315,7 @@ header{
   <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1">
   <div class="card-content">
     <h3>Kitchens</h3>
-    <p>Electrical installations</p>
+    <p>Electrical installs</p>
     <span class="price">FROM £5000</span>
   </div>
 </a>
@@ -320,7 +324,7 @@ header{
   <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a">
   <div class="card-content">
     <h3>Bathrooms</h3>
-    <p>Safe bathroom wiring</p>
+    <p>Safe wiring</p>
     <span class="price">FROM £3500</span>
   </div>
 </a>
@@ -329,7 +333,7 @@ header{
   <img src="https://images.unsplash.com/photo-1581090700227-4c4d8d45b6b2">
   <div class="card-content">
     <h3>EICR</h3>
-    <p>Safety certificates</p>
+    <p>Certificates</p>
     <span class="price">FROM £120</span>
   </div>
 </a>
