@@ -19,35 +19,21 @@ body{
 }
 
 /* =========================
-   HEADER (BRAND IDENTITY)
+   HEADER / BRAND
 ========================= */
 header{
   text-align:center;
-  padding:26px 15px;
-  background:rgba(0,0,0,0.65);
+  padding:28px 15px;
+  background:rgba(0,0,0,0.6);
   backdrop-filter:blur(12px);
   border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
-/* LOGO AREA */
 .logo{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:10px;
   font-size:22px;
   font-weight:700;
   color:#5cc8ff;
   letter-spacing:1px;
-}
-
-/* simple icon placeholder */
-.logo-box{
-  width:28px;
-  height:28px;
-  border-radius:8px;
-  background:linear-gradient(145deg,#00aaff,#0055ff);
-  box-shadow:0 0 15px rgba(0,170,255,0.4);
 }
 
 .sub{
@@ -61,7 +47,7 @@ header{
 ========================= */
 .hero{
   text-align:center;
-  padding:28px 15px;
+  padding:25px 15px;
 }
 
 .hero h2{
@@ -73,7 +59,9 @@ header{
   color:rgba(255,255,255,0.6);
 }
 
-/* CTA BUTTONS */
+/* =========================
+   TOP ACTION BUTTONS
+========================= */
 .btn{
   display:inline-block;
   padding:12px 18px;
@@ -87,6 +75,7 @@ header{
   background:rgba(0,170,255,0.18);
   border:1px solid rgba(0,170,255,0.5);
   color:#5cc8ff;
+  backdrop-filter:blur(10px);
 }
 
 .whatsapp{
@@ -96,18 +85,18 @@ header{
 }
 
 /* =========================
-   TRUST STRIP
+   TRUST BAR
 ========================= */
 .trust{
   display:flex;
   justify-content:space-around;
-  padding:14px;
+  text-align:center;
+  padding:15px 10px;
   margin:10px;
   border-radius:16px;
   background:rgba(255,255,255,0.04);
-  border:1px solid rgba(255,255,255,0.08);
   backdrop-filter:blur(10px);
-  text-align:center;
+  border:1px solid rgba(255,255,255,0.08);
 }
 
 .trust div{
@@ -116,17 +105,7 @@ header{
 }
 
 /* =========================
-   SECTION TITLE
-========================= */
-.section-title{
-  text-align:center;
-  margin:20px 0 10px;
-  font-size:16px;
-  color:#7dd3ff;
-}
-
-/* =========================
-   GRID SERVICES
+   SERVICES GRID
 ========================= */
 .grid{
   display:grid;
@@ -136,7 +115,7 @@ header{
 }
 
 /* =========================
-   SERVICE CARD (BRAND STYLE)
+   SERVICE CARD (APPLE STYLE)
 ========================= */
 .card{
   position:relative;
@@ -157,7 +136,7 @@ header{
 
 .card img{
   width:100%;
-  height:110px;
+  height:115px;
   object-fit:cover;
 }
 
@@ -190,33 +169,37 @@ header{
   color:#5cc8ff;
 }
 
-/* HOVER */
+/* =========================
+   INTERACTIONS
+========================= */
 .card:hover{
   transform:scale(1.03);
 }
 
-/* =========================
-   ABOUT SECTION
-========================= */
-.about{
-  padding:18px;
-  text-align:center;
+.card:active{
+  transform:scale(0.97);
 }
 
-.about-box{
-  background:rgba(255,255,255,0.04);
-  border:1px solid rgba(255,255,255,0.08);
-  border-radius:16px;
-  padding:14px;
-  color:rgba(255,255,255,0.7);
-  font-size:13px;
-}
+/* =========================
+   GLOWS
+========================= */
+.card:nth-child(1){ box-shadow:0 0 20px rgba(0,170,255,0.25),0 10px 30px rgba(0,0,0,0.6);}
+.card:nth-child(2){ box-shadow:0 0 20px rgba(170,90,255,0.25),0 10px 30px rgba(0,0,0,0.6);}
+.card:nth-child(3){ box-shadow:0 0 20px rgba(0,255,170,0.20),0 10px 30px rgba(0,0,0,0.6);}
+.card:nth-child(4){ box-shadow:0 0 20px rgba(255,140,0,0.20),0 10px 30px rgba(0,0,0,0.6);}
+.card:nth-child(5){ box-shadow:0 0 20px rgba(0,220,255,0.20),0 10px 30px rgba(0,0,0,0.6);}
+.card:nth-child(6){ box-shadow:0 0 20px rgba(255,220,0,0.20),0 10px 30px rgba(0,0,0,0.6);}
 
 /* =========================
    TESTIMONIALS
 ========================= */
 .testimonials{
   padding:18px;
+}
+
+.testimonials h3{
+  text-align:center;
+  color:#5cc8ff;
 }
 
 .quote{
@@ -230,7 +213,7 @@ header{
 }
 
 /* =========================
-   FOOTER CTA BAR
+   STICKY BAR
 ========================= */
 .sticky{
   position:fixed;
@@ -240,7 +223,7 @@ header{
   display:flex;
   justify-content:space-around;
   padding:12px;
-  background:rgba(0,0,0,0.75);
+  background:rgba(0,0,0,0.7);
   backdrop-filter:blur(10px);
   border-top:1px solid rgba(255,255,255,0.08);
 }
@@ -258,28 +241,23 @@ header{
 <body>
 
 <header>
-  <div class="logo">
-    <div class="logo-box"></div>
-    Sperin Services
-  </div>
-  <div class="sub">Electrician • West Midlands • Fully Qualified & Insured</div>
+  <div class="logo">Sperin Services</div>
+  <div class="sub">Electrician • West Midlands • Fully Certified & Insured</div>
 </header>
 
 <section class="hero">
-  <h2>Trusted Electrical Contractor</h2>
-  <p>Professional work. Clean finish. Reliable service.</p>
+  <h2>Reliable Electrical Services</h2>
+  <p>Fast response • Clean work • Trusted locally</p>
 
   <a class="btn call" href="tel:07817360156">📞 Call Now</a>
   <a class="btn whatsapp" href="https://wa.me/447817360156">💬 WhatsApp</a>
 </section>
 
 <section class="trust">
-  <div>⚡ Qualified</div>
-  <div>🛡️ Insured</div>
-  <div>📍 Local</div>
+  <div>⚡ Qualified Electrician</div>
+  <div>🛡️ Insured Work</div>
+  <div>📍 Local & Trusted</div>
 </section>
-
-<div class="section-title">Our Services</div>
 
 <section class="grid">
 
@@ -296,7 +274,7 @@ header{
   <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea">
   <div class="card-content">
     <h3>Rewires</h3>
-    <p>Full property rewires</p>
+    <p>Full house rewiring</p>
     <span class="price">FROM £3000</span>
   </div>
 </a>
@@ -314,7 +292,7 @@ header{
   <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1">
   <div class="card-content">
     <h3>Kitchens</h3>
-    <p>Full electrical installs</p>
+    <p>Electrical installations</p>
     <span class="price">FROM £5000</span>
   </div>
 </a>
@@ -323,7 +301,7 @@ header{
   <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a">
   <div class="card-content">
     <h3>Bathrooms</h3>
-    <p>Safe electrical work</p>
+    <p>Safe bathroom wiring</p>
     <span class="price">FROM £3500</span>
   </div>
 </a>
@@ -331,28 +309,18 @@ header{
 <a href="eicr.html" class="card">
   <img src="https://images.unsplash.com/photo-1581090700227-4c4d8d45b6b2">
   <div class="card-content">
-    <h3>EICR Reports</h3>
-    <p>Electrical certification</p>
+    <h3>EICR</h3>
+    <p>Safety certificates</p>
     <span class="price">FROM £120</span>
   </div>
 </a>
 
 </section>
 
-<div class="section-title">About Us</div>
-
-<section class="about">
-  <div class="about-box">
-    Sperin Services provides reliable domestic electrical work across the West Midlands. 
-    We focus on safe installations, clean finishes, and honest pricing.
-  </div>
-</section>
-
-<div class="section-title">Customer Feedback</div>
-
 <section class="testimonials">
-  <div class="quote">“Turned up on time, very professional and clean work.”</div>
-  <div class="quote">“Great service, would definitely recommend.”</div>
+  <h3>What Customers Say</h3>
+  <div class="quote">“Fast, tidy and professional — highly recommend.”</div>
+  <div class="quote">“Turned up on time and did a brilliant job.”</div>
 </section>
 
 <div class="sticky">
