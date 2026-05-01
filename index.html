@@ -6,257 +6,49 @@
 
 <title>Sperin Services | Electrician West Midlands</title>
 
+<meta name="description" content="Electrician in the West Midlands. Consumer units, rewires, EV chargers, kitchens, bathrooms and EICR.">
+
 <style>
+body{margin:0;font-family:Arial;background:#020617;color:white}
+header{text-align:center;padding:20px;background:#000}
+.logo{font-size:22px;color:#5cc8ff}
+.hero{text-align:center;padding:20px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;padding:14px}
 
-/* =========================
-   BASE
-========================= */
-body{
-  margin:0;
-  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Arial;
-  background: radial-gradient(circle at top, #0b1220, #020617);
-  color:white;
-}
-
-/* =========================
-   HEADER
-========================= */
-header{
-  text-align:center;
-  padding:28px 15px;
-  background:rgba(0,0,0,0.6);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid rgba(255,255,255,0.08);
-}
-
-.logo{
-  font-size:22px;
-  font-weight:700;
-  color:#5cc8ff;
-  letter-spacing:1px;
-}
-
-.sub{
-  font-size:13px;
-  color:rgba(255,255,255,0.6);
-  margin-top:6px;
-}
-
-/* =========================
-   HERO
-========================= */
-.hero{
-  text-align:center;
-  padding:25px 15px;
-}
-
-.hero h2{
-  margin:10px 0;
-  font-weight:600;
-}
-
-.hero p{
-  color:rgba(255,255,255,0.6);
-}
-
-/* =========================
-   BUTTONS
-========================= */
-.btn{
-  display:inline-block;
-  padding:12px 18px;
-  margin:8px;
-  border-radius:14px;
-  font-weight:600;
-  text-decoration:none;
-}
-
-.call{
-  background:rgba(0,170,255,0.18);
-  border:1px solid rgba(0,170,255,0.5);
-  color:#5cc8ff;
-}
-
-.whatsapp{
-  background:rgba(37,211,102,0.18);
-  border:1px solid rgba(37,211,102,0.5);
-  color:#25d366;
-}
-
-/* =========================
-   TRUST BAR
-========================= */
-.trust{
-  display:flex;
-  justify-content:space-around;
-  text-align:center;
-  padding:15px 10px;
-  margin:10px;
-  border-radius:16px;
-  background:rgba(255,255,255,0.04);
-  backdrop-filter:blur(10px);
-  border:1px solid rgba(255,255,255,0.08);
-}
-
-.trust div{
-  font-size:11px;
-  color:rgba(255,255,255,0.7);
-}
-
-/* =========================
-   GRID
-========================= */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:14px;
-  padding:16px;
-}
-
-/* =========================
-   🌟 FINAL APP-STYLE TILE SYSTEM
-========================= */
+/* BUTTON TILE */
 .card{
-  position:relative;
-  border-radius:22px;
+  border-radius:20px;
   overflow:hidden;
   text-decoration:none;
   color:white;
-
-  background:rgba(255,255,255,0.05);
-  backdrop-filter:blur(14px);
-
-  border:1px solid rgba(255,255,255,0.08);
-
-  box-shadow:0 10px 25px rgba(0,0,0,0.6);
-
-  transition:0.25s ease;
+  position:relative;
+  background:#111;
+  transition:0.2s;
 }
 
-/* image */
-.card img{
-  width:100%;
-  height:115px;
-  object-fit:cover;
-  filter:contrast(1.05) saturate(1.1);
-}
-
-/* content */
-.card-content{
-  padding:12px;
-}
-
-.card h3{
-  margin:0;
-  font-size:14px;
-  font-weight:600;
-  color:#7dd3ff;
-}
-
-.card p{
-  margin:6px 0 0;
-  font-size:12px;
-  color:rgba(255,255,255,0.65);
-}
-
-.price{
-  display:inline-block;
-  margin-top:10px;
-  font-size:11px;
-  font-weight:600;
-  padding:5px 9px;
-  border-radius:10px;
-  background:rgba(0,170,255,0.15);
-  border:1px solid rgba(0,170,255,0.4);
-  color:#5cc8ff;
-}
-
-/* =========================
-   🔥 PERMANENT GLOW (KEY FIX)
-========================= */
+/* glow */
 .card::before{
   content:"";
   position:absolute;
-  inset:0;
-  border-radius:22px;
-  pointer-events:none;
-
-  opacity:0.65; /* ALWAYS ON */
+  inset:-3px;
   filter:blur(20px);
+  opacity:0.7;
 }
 
-/* glow colours */
-.card:nth-child(1)::before{ background:rgba(0,170,255,0.35); }
-.card:nth-child(2)::before{ background:rgba(170,90,255,0.35); }
-.card:nth-child(3)::before{ background:rgba(0,255,170,0.25); }
-.card:nth-child(4)::before{ background:rgba(255,140,0,0.25); }
-.card:nth-child(5)::before{ background:rgba(0,220,255,0.25); }
-.card:nth-child(6)::before{ background:rgba(255,220,0,0.25); }
+/* colours */
+.card:nth-child(1)::before{background:#00aaff;}
+.card:nth-child(2)::before{background:#a855f7;}
+.card:nth-child(3)::before{background:#00ffaa;}
+.card:nth-child(4)::before{background:#ff8800;}
+.card:nth-child(5)::before{background:#00e0ff;}
+.card:nth-child(6)::before{background:#ffd700;}
 
-/* =========================
-   HOVER EFFECT
-========================= */
-.card:hover{
-  transform:translateY(-4px) scale(1.03);
-}
+.card:hover{transform:scale(1.03)}
+.card:active{transform:scale(0.97)}
 
-.card:hover::before{
-  opacity:1;
-  filter:blur(25px);
-}
-
-/* =========================
-   CLICK / PRESS EFFECT
-========================= */
-.card:active{
-  transform:translateY(3px) scale(0.98);
-  box-shadow:0 4px 10px rgba(0,0,0,0.8);
-}
-
-/* =========================
-   TESTIMONIALS
-========================= */
-.testimonials{
-  padding:18px;
-}
-
-.testimonials h3{
-  text-align:center;
-  color:#5cc8ff;
-}
-
-.quote{
-  margin:10px 0;
-  padding:12px;
-  border-radius:14px;
-  background:rgba(255,255,255,0.04);
-  border:1px solid rgba(255,255,255,0.08);
-  font-size:13px;
-  color:rgba(255,255,255,0.7);
-}
-
-/* =========================
-   STICKY BAR
-========================= */
-.sticky{
-  position:fixed;
-  bottom:0;
-  left:0;
-  right:0;
-  display:flex;
-  justify-content:space-around;
-  padding:12px;
-  background:rgba(0,0,0,0.7);
-  backdrop-filter:blur(10px);
-  border-top:1px solid rgba(255,255,255,0.08);
-}
-
-.sticky a{
-  color:white;
-  text-decoration:none;
-  font-weight:600;
-  font-size:13px;
-}
+.card img{width:100%;height:120px;object-fit:cover}
+.card-content{padding:10px}
+.price{font-size:12px;color:#5cc8ff}
 
 </style>
 </head>
@@ -264,93 +56,65 @@ header{
 <body>
 
 <header>
-  <div class="logo">Sperin Services</div>
-  <div class="sub">Electrician • West Midlands • Fully Certified & Insured</div>
+<div class="logo">Sperin Services</div>
 </header>
 
 <section class="hero">
-  <h2>Reliable Electrical Services</h2>
-  <p>Fast response • Clean work • Trusted locally</p>
-
-  <a class="btn call" href="tel:07817360156">📞 Call Now</a>
-  <a class="btn whatsapp" href="https://wa.me/447817360156">💬 WhatsApp</a>
-</section>
-
-<section class="trust">
-  <div>⚡ Qualified</div>
-  <div>🛡️ Insured</div>
-  <div>📍 Local</div>
+<h2>Electrical Services</h2>
+<p>West Midlands</p>
 </section>
 
 <section class="grid">
 
 <a href="consumer.html" class="card">
-  <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789">
-  <div class="card-content">
-    <h3>Consumer Units</h3>
-    <p>Fuse board upgrades</p>
-    <span class="price">FROM £450</span>
-  </div>
+<img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789">
+<div class="card-content">
+<h3>Consumer Units</h3>
+<p class="price">FROM £450</p>
+</div>
 </a>
 
 <a href="rewires.html" class="card">
-  <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea">
-  <div class="card-content">
-    <h3>Rewires</h3>
-    <p>Full house rewiring</p>
-    <span class="price">FROM £3000</span>
-  </div>
+<img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea">
+<div class="card-content">
+<h3>Rewires</h3>
+<p class="price">FROM £3000</p>
+</div>
 </a>
 
 <a href="ev.html" class="card">
-  <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399">
-  <div class="card-content">
-    <h3>EV Charging</h3>
-    <p>Home installs</p>
-    <span class="price">FROM £800</span>
-  </div>
+<img src="https://images.unsplash.com/photo-1617788138017-80ad40651399">
+<div class="card-content">
+<h3>EV Charging</h3>
+<p class="price">FROM £800</p>
+</div>
 </a>
 
 <a href="kitchens.html" class="card">
-  <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1">
-  <div class="card-content">
-    <h3>Kitchens</h3>
-    <p>Electrical installs</p>
-    <span class="price">FROM £5000</span>
-  </div>
+<img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1">
+<div class="card-content">
+<h3>Kitchens</h3>
+<p class="price">FROM £5000</p>
+</div>
 </a>
 
 <a href="bathrooms.html" class="card">
-  <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a">
-  <div class="card-content">
-    <h3>Bathrooms</h3>
-    <p>Safe wiring</p>
-    <span class="price">FROM £3500</span>
-  </div>
+<img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a">
+<div class="card-content">
+<h3>Bathrooms</h3>
+<p class="price">FROM £3500</p>
+</div>
 </a>
 
 <a href="eicr.html" class="card">
-  <img src="https://images.unsplash.com/photo-1581090700227-4c4d8d45b6b2">
-  <div class="card-content">
-    <h3>EICR</h3>
-    <p>Certificates</p>
-    <span class="price">FROM £120</span>
-  </div>
+<img src="https://images.unsplash.com/photo-1581090700227-4c4d8d45b6b2">
+<div class="card-content">
+<h3>EICR</h3>
+<p class="price">FROM £120</p>
+</div>
 </a>
 
 </section>
-
-<section class="testimonials">
-  <h3>What Customers Say</h3>
-  <div class="quote">“Fast, tidy and professional — highly recommend.”</div>
-  <div class="quote">“Turned up on time and did a brilliant job.”</div>
-</section>
-
-<div class="sticky">
-  <a href="tel:07817360156">📞 Call</a>
-  <a href="https://wa.me/447817360156">💬 WhatsApp</a>
-  <a href="#">✉️ Quote</a>
-</div>
 
 </body>
 </html>
