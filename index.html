@@ -1,255 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sperin Services | Electrician West Midlands</title>
+<title>Electrician West Midlands | Sperin Services | EICR, Rewires, EV Chargers</title>
+
+<meta name="description" content="Sperin Services - Trusted electrician in the West Midlands. Consumer units, rewires, EV chargers, EICRs, kitchens & bathrooms. Call 07817 360 156.">
+
+<meta name="keywords" content="electrician West Midlands, EICR West Midlands, fuse board upgrade, EV charger install, rewiring electrician Birmingham">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 
 /* BASE */
-body{
-  margin:0;
-  font-family:-apple-system, Arial;
-  background:#0b1220;
-  color:white;
-}
+body{margin:0;font-family:'Orbitron',sans-serif;background:#020617;color:white}
 
-/* HERO VIDEO */
-.hero{
-  position:relative;
-  height:75vh;
-  overflow:hidden;
-}
-
-.hero video{
-  position:absolute;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.hero::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.65);
-}
+/* HERO */
+.hero{position:relative;height:75vh;overflow:hidden}
+.hero video,.hero img{position:absolute;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,0.7)}
 
 .hero-content{
-  position:relative;
-  z-index:1;
-  text-align:center;
-  top:50%;
-  transform:translateY(-50%);
+position:relative;
+z-index:1;
+top:50%;
+transform:translateY(-50%);
+text-align:center;
+padding:20px;
 }
 
-/* CONTACT BUTTONS */
-.contact-bar{
-  display:flex;
-  justify-content:center;
-  gap:10px;
-  margin-top:15px;
-  flex-wrap:wrap;
+h1{font-size:34px;margin:0;color:#1e90ff}
+h2{color:#1e90ff}
+
+p{color:#ccc}
+
+/* BUTTONS */
+.btn{
+display:inline-block;
+margin:8px;
+padding:12px 18px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+color:white;
+position:relative;
 }
 
-.contact-btn{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  padding:12px 16px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:600;
-  color:white;
+.btn::before{
+content:"";
+position:absolute;
+inset:-3px;
+border-radius:10px;
+z-index:-1;
+filter:blur(10px);
+opacity:0.7;
 }
 
-.call{background:#007aff;}
-.whatsapp{background:#25d366;}
-.email{background:#ff9500;}
+.call{background:#1e90ff}
+.call::before{background:#1e90ff}
 
-/* SERVICES GRID */
+.whatsapp{background:#25d366}
+.whatsapp::before{background:#25d366}
+
+.email{background:#ff9500}
+.email::before{background:#ff9500}
+
+/* SERVICES */
 .services{
-  display:grid;
-  gap:20px;
-  padding:20px;
+display:grid;
+gap:20px;
+padding:20px;
 }
 
 .service{
-  position:relative;
-  border-radius:16px;
-  overflow:hidden;
-  text-decoration:none;
-  color:white;
+border-radius:14px;
+overflow:hidden;
+text-decoration:none;
+color:white;
+background:#111827;
 }
 
 .service img{
-  width:100%;
-  height:180px;
-  object-fit:cover;
-  display:block;
-}
-
-/* OUTER GLOW ONLY */
-.service::before{
-  content:"";
-  position:absolute;
-  inset:-3px;
-  border-radius:18px;
-  z-index:-1;
-  filter:blur(12px);
-  opacity:0.7;
-  transition:0.2s;
-}
-
-/* colours */
-.service:nth-child(1)::before{background:#00aaff;}
-.service:nth-child(2)::before{background:#a855f7;}
-.service:nth-child(3)::before{background:#00ffaa;}
-.service:nth-child(4)::before{background:#ff8800;}
-.service:nth-child(5)::before{background:#00e0ff;}
-.service:nth-child(6)::before{background:#ffd700;}
-
-/* HOVER + CLICK */
-.service:hover::before{
-  opacity:1;
-}
-
-.service:active::before{
-  filter:blur(18px);
-  opacity:1;
+width:100%;
+height:200px;
+object-fit:cover;
 }
 
 .service-content{
-  position:absolute;
-  bottom:0;
-  background:rgba(0,0,0,0.6);
-  width:100%;
-  padding:10px;
+padding:15px;
 }
 
-/* BEFORE AFTER */
+/* CONTENT SECTION */
 .section{
-  padding:30px 20px;
+padding:40px 20px;
+max-width:900px;
+margin:auto;
 }
 
-.gallery{
-  display:grid;
-  gap:10px;
-}
-
-.gallery img{
-  width:100%;
-  border-radius:10px;
-}
-
-/* FORM */
-form{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-
-input, textarea{
-  padding:10px;
-  border-radius:6px;
-  border:none;
-}
-
-button{
-  padding:12px;
-  background:#00aaff;
-  color:white;
-  border:none;
-  border-radius:6px;
-}
-
-/* MOBILE GRID */
+/* RESPONSIVE */
 @media(min-width:768px){
-  .services{grid-template-columns:repeat(3,1fr);}
-  .gallery{grid-template-columns:repeat(3,1fr);}
+.services{grid-template-columns:repeat(3,1fr);}
 }
 
 </style>
+
+<!-- LOCAL BUSINESS SCHEMA -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Electrician",
+ "name": "Sperin Services",
+ "telephone": "07817360156",
+ "areaServed": "West Midlands",
+ "description": "Electrical and building services including rewires, EV chargers and EICR certificates"
+}
+</script>
+
 </head>
 
 <body>
 
 <!-- HERO -->
 <section class="hero">
-  <video autoplay muted loop playsinline>
-    <source src="https://cdn.coverr.co/videos/coverr-electrician-installing-wires-1570/1080p.mp4" type="video/mp4">
-  </video>
 
-  <div class="hero-content">
-    <h1>Sperin Services</h1>
-    <p>Electrician • West Midlands</p>
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
 
-    <div class="contact-bar">
-      <a class="contact-btn call" href="tel:07817360156">📞 Call</a>
-      <a class="contact-btn whatsapp" href="https://wa.me/447817360156">💬 WhatsApp</a>
-      <a class="contact-btn email" href="mailto:sperinservices@gmail.com">✉️ Email</a>
-    </div>
-  </div>
+<video autoplay muted loop playsinline>
+<source src="https://cdn.coverr.co/videos/coverr-electrician-working-5176/1080p.mp4">
+</video>
+
+<div class="hero-content">
+<h1>Electrician in the West Midlands</h1>
+<p>Reliable electrical & building services you can trust</p>
+
+<a href="tel:07817360156" class="btn call">Call</a>
+<a href="https://wa.me/447817360156" class="btn whatsapp">WhatsApp</a>
+<a href="mailto:sperinservices@gmail.com" class="btn email">Email</a>
+</div>
+
 </section>
 
 <!-- SERVICES -->
 <section class="services">
 
-<a href="#" class="service">
-<img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789">
-<div class="service-content">Consumer Units</div>
-</a>
-
-<a href="#" class="service">
-<img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea">
-<div class="service-content">Rewires</div>
-</a>
-
-<a href="#" class="service">
-<img src="https://images.unsplash.com/photo-1617788138017-80ad40651399">
-<div class="service-content">EV Charging</div>
-</a>
-
-<a href="#" class="service">
-<img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1">
-<div class="service-content">Kitchens</div>
-</a>
-
-<a href="#" class="service">
-<img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a">
-<div class="service-content">Bathrooms</div>
-</a>
-
-<a href="#" class="service">
-<img src="https://images.unsplash.com/photo-1581090700227-4c4d8d45b6b2">
-<div class="service-content">EICR</div>
-</a>
-
-</section>
-
-<!-- BEFORE AFTER -->
-<section class="section">
-<h2>Before & After</h2>
-
-<div class="gallery">
-  <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
-  <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
-  <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c">
+<a href="rewires.html" class="service">
+<img src="https://images.unsplash.com/photo-1581092160607-ee22731c4f8c">
+<div class="service-content">
+<h3>House Rewiring West Midlands</h3>
+<p>Full and partial rewires. Safe, certified and future-proof installations.</p>
 </div>
+</a>
+
+<a href="consumer.html" class="service">
+<img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789">
+<div class="service-content">
+<h3>Consumer Unit Upgrades</h3>
+<p>Fuse board upgrades to meet latest regulations and improve safety.</p>
+</div>
+</a>
+
+<a href="ev.html" class="service">
+<img src="https://images.unsplash.com/photo-1617788138017-80ad40651399">
+<div class="service-content">
+<h3>EV Charger Installation</h3>
+<p>Home EV charging installation for all makes and models.</p>
+</div>
+</a>
+
 </section>
 
-<!-- QUOTE FORM -->
+<!-- SEO TEXT -->
 <section class="section">
-<h2>Get a Quote</h2>
 
-<form action="mailto:sperinservices@gmail.com" method="post" enctype="text/plain">
-  <input type="text" placeholder="Your Name" required>
-  <input type="tel" placeholder="Phone Number" required>
-  <textarea placeholder="Job details..." required></textarea>
-  <button type="submit">Send Quote Request</button>
-</form>
+<h2>Trusted Electrician in the West Midlands</h2>
+
+<p>
+Sperin Services provides professional electrical services across the West Midlands including Birmingham, Wolverhampton and surrounding areas. 
+We specialise in rewires, consumer unit upgrades, EICR certificates and EV charger installations.
+</p>
+
+<p>
+All work is carried out to the latest regulations and fully insured. Whether you need a full house rewire, a fuse board upgrade or a landlord safety certificate, we provide reliable, high-quality workmanship every time.
+</p>
+
+<h2>Why Choose Sperin Services?</h2>
+
+<p>
+✔ Fully qualified electrician  
+✔ 2391 Testing & Inspection  
+✔ Part P Registered  
+✔ Trusted local service  
+✔ Competitive pricing  
+</p>
 
 </section>
 
