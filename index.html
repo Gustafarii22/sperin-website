@@ -1,333 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Sperin Services | Electrician West Midlands</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-<style>
-
-/* ===== BASE ===== */
-body{
-  margin:0;
-  font-family:'Inter',sans-serif;
-  background:#020617;
-  color:white;
-  scroll-behavior:smooth;
-}
-
-/* ===== HEADER ===== */
-.header{
-  position:fixed;
-  top:0;
-  width:100%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 25px;
-  background:rgba(0,0,0,0.6);
-  backdrop-filter:blur(10px);
-  z-index:1000;
-}
-
-.logo{
-  font-family:'Orbitron';
-  font-weight:900;
-  color:#1e90ff;
-  font-size:22px;
-}
-
-.nav a{
-  margin-left:20px;
-  text-decoration:none;
-  color:white;
-  font-size:13px;
-}
-
-/* ===== HERO ===== */
-.hero{
-  height:100vh;
-  position:relative;
-  overflow:hidden;
-}
-
-.hero video{
-  position:absolute;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.hero::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to bottom, rgba(0,0,0,0.7), #020617);
-}
-
-.hero-content{
-  position:relative;
-  z-index:1;
-  text-align:center;
-  top:50%;
-  transform:translateY(-50%);
-  padding:20px;
-}
-
-.hero h1{
-  font-family:'Orbitron';
-  font-size:42px;
-  color:#1e90ff;
-}
-
-.hero p{
-  color:#ccc;
-}
-
-/* ===== BUTTONS ===== */
-.btn{
-  display:inline-block;
-  margin:10px;
-  padding:14px 22px;
-  border-radius:10px;
-  text-decoration:none;
-  color:white;
-  position:relative;
-  font-weight:600;
-  backdrop-filter:blur(8px);
-}
-
-.btn::before{
-  content:"";
-  position:absolute;
-  inset:-3px;
-  border-radius:12px;
-  z-index:-1;
-  filter:blur(12px);
-  opacity:0.7;
-}
-
-.call{background:#1e90ff}
-.call::before{background:#1e90ff}
-
-.whatsapp{background:#25d366}
-.whatsapp::before{background:#25d366}
-
-.email{background:#ff9500}
-.email::before{background:#ff9500}
-
-.btn:hover{
-  transform:translateY(-2px);
-}
-
-.btn:active::before{
-  filter:blur(20px);
-}
-
-/* ===== SERVICES ===== */
-.section{
-  padding:100px 20px;
-  text-align:center;
-}
-
-.services{
-  display:grid;
-  gap:25px;
-  margin-top:40px;
-}
-
-.service{
-  position:relative;
-  border-radius:18px;
-  overflow:hidden;
-  text-decoration:none;
-  color:white;
-  transform:translateY(40px);
-  opacity:0;
-  transition:0.6s ease;
-}
-
-.service.show{
-  transform:translateY(0);
-  opacity:1;
-}
-
-.service img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-}
-
-/* CLEAN GLOW EDGE */
-.service::before{
-  content:"";
-  position:absolute;
-  inset:-4px;
-  border-radius:20px;
-  z-index:-1;
-  background:#1e90ff;
-  filter:blur(14px);
-  opacity:0.5;
-}
-
-.service:hover::before{
-  opacity:0.9;
-}
-
-.service:active::before{
-  filter:blur(22px);
-}
-
-/* CONTENT */
-.service-content{
-  position:absolute;
-  bottom:0;
-  width:100%;
-  padding:15px;
-  background:linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-  text-align:left;
-  font-weight:600;
-}
-
-/* ===== GALLERY ===== */
-.gallery{
-  display:grid;
-  gap:15px;
-}
-
-.gallery img{
-  width:100%;
-  border-radius:12px;
-}
-
-/* ===== QUOTE ===== */
-.quote-box{
-  max-width:500px;
-  margin:auto;
-}
-
-.quote-box input,
-.quote-box textarea{
-  width:100%;
-  padding:12px;
-  margin-bottom:10px;
-  border-radius:8px;
-  border:none;
-}
-
-.quote-box button{
-  width:100%;
-  padding:14px;
-  background:#1e90ff;
-  border:none;
-  border-radius:8px;
-  color:white;
-  font-weight:700;
-}
-
-/* ===== RESPONSIVE ===== */
-@media(min-width:768px){
-  .services{grid-template-columns:repeat(4,1fr);}
-  .gallery{grid-template-columns:repeat(3,1fr);}
-}
-
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sperin Services</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-<!-- HEADER -->
-<div class="header">
-  <div class="logo">SPERIN SERVICES</div>
-  <div class="nav">
-    <a href="#services">Services</a>
-    <a href="#quote">Quote</a>
+<header class="hero">
+  <div class="logo">⚡S</div>
+  <h1>SPERIN SERVICES</h1>
+  <h2>ELECTRICAL & BUILDING SOLUTIONS</h2>
+
+  <p class="name">Augustine Sperin</p>
+  <p>📞 07817 360156</p>
+  <p>📍 West Midlands & Surrounding Areas</p>
+
+  <div class="hero-buttons">
+    <a href="tel:07817360156">CALL NOW</a>
+    <a href="https://wa.me/447817360156">WHATSAPP</a>
   </div>
-</div>
+</header>
 
-<!-- HERO -->
-<section class="hero">
+<section class="tagline">
+  HIGH END FINISH. RELIABLE SERVICE. <span>EVERY TIME.</span>
+</section>
 
-<video autoplay muted loop playsinline>
-<source src="https://cdn.coverr.co/videos/coverr-electrician-working-5176/1080p.mp4">
-</video>
+<section class="services">
 
-<div class="hero-content">
-<h1>Electrical & Building Solutions</h1>
-<p>West Midlands • Trusted • Professional</p>
+  <a class="service-card blue" href="rewires.html">
+    <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=900&q=80">
+    <h3>FULL & PART REWIRES</h3>
+    <p>Smart home automation, new circuits, sockets and safe certified installs.</p>
+    <strong>FROM £2,500</strong>
+  </a>
 
-<a href="tel:07817360156" class="btn call">Call</a>
-<a href="https://wa.me/447817360156" class="btn whatsapp">WhatsApp</a>
-<a href="mailto:sperinservices@gmail.com" class="btn email">Email</a>
-</div>
+  <a class="service-card green" href="ev-chargers.html">
+    <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=900&q=80">
+    <h3>EV CHARGERS</h3>
+    <p>Home and commercial EV charger installations.</p>
+    <strong>FROM £550</strong>
+  </a>
+
+  <a class="service-card orange" href="consumer-units.html">
+    <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=80">
+    <h3>CONSUMER UNIT UPGRADES</h3>
+    <p>Modern FuseBox boards, SPD options and full testing.</p>
+    <strong>FROM £550</strong>
+  </a>
+
+  <a class="service-card purple" href="bathrooms.html">
+    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80">
+    <h3>BATHROOM INSTALLATIONS</h3>
+    <p>Full bathroom installations, design service and high-end finish.</p>
+    <strong>FROM £3,500</strong>
+  </a>
+
+  <a class="service-card gold" href="kitchens.html">
+    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=900&q=80">
+    <h3>KITCHEN INSTALLATIONS</h3>
+    <p>Full kitchen installations, design service and bespoke solutions.</p>
+    <strong>FROM £4,000</strong>
+  </a>
 
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="section">
-<h2>Our Services</h2>
+<section class="info">
+  <div>
+    <h3>QUALIFICATIONS</h3>
+    <p>✓ 2391 Testing & Inspection</p>
+    <p>✓ 18th Edition Qualified</p>
+    <p>✓ Fully Insured</p>
+    <p>✓ 23 Years Electrical Experience</p>
+  </div>
 
-<div class="services">
-
-<a href="rewires.html" class="service"><img src="https://images.unsplash.com/photo-1581092160607-ee22731c4f8c"><div class="service-content">Rewires</div></a>
-<a href="consumer.html" class="service"><img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789"><div class="service-content">Consumer Units</div></a>
-<a href="ev.html" class="service"><img src="https://images.unsplash.com/photo-1617788138017-80ad40651399"><div class="service-content">EV Chargers</div></a>
-<a href="eicr.html" class="service"><img src="https://images.unsplash.com/photo-1581090700227-4c4d8d45b6b2"><div class="service-content">EICR</div></a>
-<a href="kitchens.html" class="service"><img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1"><div class="service-content">Kitchens</div></a>
-<a href="bathrooms.html" class="service"><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a"><div class="service-content">Bathrooms</div></a>
-<a href="#" class="service"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e"><div class="service-content">Extensions</div></a>
-<a href="#" class="service"><img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511"><div class="service-content">General Electrical</div></a>
-
-</div>
+  <div>
+    <h3>WHAT WE DO</h3>
+    <p>✓ Electrical Installations</p>
+    <p>✓ Fault Finding & Repairs</p>
+    <p>✓ Lighting Design & Installation</p>
+    <p>✓ Certification including Part P</p>
+    <p>✓ EICRs (Landlord Certificates)</p>
+  </div>
 </section>
 
-<!-- GALLERY -->
-<section class="section">
-<h2>Recent Work</h2>
-
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
-<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
-<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c">
-</div>
-
-</section>
-
-<!-- QUOTE -->
-<section id="quote" class="section">
-<h2>Get a Quote</h2>
-
-<div class="quote-box">
-<form action="mailto:sperinservices@gmail.com">
-<input type="text" placeholder="Name" required>
-<input type="tel" placeholder="Phone" required>
-<textarea placeholder="Job details"></textarea>
-<button type="submit">Request Quote</button>
-</form>
-</div>
-
-</section>
-
-<script>
-
-/* SCROLL ANIMATION */
-const items = document.querySelectorAll('.service');
-
-window.addEventListener('scroll', ()=>{
-  items.forEach(el=>{
-    const top = el.getBoundingClientRect().top;
-    if(top < window.innerHeight - 100){
-      el.classList.add('show');
-    }
-  });
-});
-
-</script>
+<footer>
+  <h2>NEED A QUOTE?</h2>
+  <a href="tel:07817360156">CALL 07817 360156</a>
+  <a href="https://wa.me/447817360156">WHATSAPP US</a>
+</footer>
 
 </body>
 </html>
