@@ -3,68 +3,229 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Sperin Services | Electrical & Building Solutions</title>
-  <meta name="description" content="Sperin Services provides electrical and building solutions including rewires, consumer unit upgrades, EV chargers, smart home automation, kitchens and bathrooms." />
+  <meta name="description" content="Premium electrical and building services across the West Midlands including rewires, consumer units, EV chargers, smart home automation, kitchens and bathrooms." />
+
   <link rel="stylesheet" href="style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Electrician",
+    "name": "Sperin Services",
+    "telephone": "+447817360156",
+    "email": "info@sperinservices.co.uk",
+    "url": "https://sperinservices.co.uk",
+    "areaServed": ["West Midlands", "Birmingham", "Sutton Coldfield", "Tamworth", "Walsall", "Solihull"],
+    "priceRange": "££"
+  }
+  </script>
 </head>
+
 <body>
 
-<header>
-  <div class="container nav">
-    <a class="logo" href="index.html">
-      <span class="logo-mark">⚡</span>
-      <span>SPERIN <span>SERVICES</span></span>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">⚡</span>
+      <span class="brand-text">SPERIN <strong>SERVICES</strong></span>
     </a>
-    <nav>
-      <ul>
-        <li><a href="rewires.html">Rewires</a></li>
-        <li><a href="consumer-units.html">Consumer Units</a></li>
-        <li><a href="ev-chargers.html">EV Chargers</a></li>
-        <li><a href="smart-home.html">Smart Home</a></li>
-        <li><a href="kitchens-bathrooms.html">Kitchens & Bathrooms</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
+
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="rewires.html">Rewires</a>
+      <a href="consumer-units.html">Consumer Units</a>
+      <a href="ev-chargers.html">EV Chargers</a>
+      <a href="smart-home.html">Smart Home</a>
+      <a href="kitchens-bathrooms.html">Kitchens & Bathrooms</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-quote">Get Quote</a>
     </nav>
-    <a class="nav-btn" href="contact.html">Get Quote</a>
   </div>
 </header>
 
 <main>
-  <section class="hero">
-    <div class="container hero-content">
-      <div class="eyebrow">Electrical & Building Solutions</div>
-      <h1>Quality You Can See.<br><span>Service You Can Trust.</span></h1>
-      <p>Professional electrical and building services with a clean, modern finish. Covering rewires, consumer units, EV chargers, smart home automation, kitchens and bathrooms.</p>
-      <div class="buttons">
-        <a class="btn btn-primary" href="tel:07817360156">Call 07817 360156</a>
-        <a class="btn btn-whatsapp" href="https://wa.me/447817360156">WhatsApp</a>
-        <a class="btn btn-outline" href="contact.html">Free Quote</a>
+
+  <section class="hero hero-electric">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Electrical & Building Solutions</p>
+        <h1>Quality You Can See.<br><span>Service You Can Trust.</span></h1>
+        <p class="hero-lead">
+          Premium electrical and building work across the West Midlands.
+          Rewires, consumer units, EV chargers, smart homes, kitchens,
+          bathrooms and testing.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-blue" href="tel:07817360156">Call 07817 360156</a>
+          <a class="btn btn-green" href="https://wa.me/447817360156">WhatsApp</a>
+          <a class="btn btn-gold" href="contact.html">Free Quote</a>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <div class="spark-card">
+          <span class="spark-icon">⚡</span>
+          <h2>No Job Too Big Or Small</h2>
+          <p>Fully qualified. Fully insured. Clean, tidy and professional.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <div class="trust-strip">
+  <section class="service-menu-section">
+    <div class="container">
+      <div class="section-title">
+        <p class="eyebrow">Choose A Service</p>
+        <h2>Illuminated Service Menu</h2>
+        <p>Fast access to your main services with electric illuminated edges.</p>
+      </div>
+
+      <div class="glow-menu">
+        <a class="glow-button blue" href="rewires.html">
+          <span>Full & Part Rewires</span>
+          <small>From £2,500</small>
+        </a>
+
+        <a class="glow-button cyan" href="consumer-units.html">
+          <span>Consumer Unit Upgrades</span>
+          <small>From £550</small>
+        </a>
+
+        <a class="glow-button green" href="ev-chargers.html">
+          <span>EV Chargers</span>
+          <small>From £550</small>
+        </a>
+
+        <a class="glow-button purple" href="smart-home.html">
+          <span>Smart Home Automation</span>
+          <small>Lighting • Heating • Security</small>
+        </a>
+
+        <a class="glow-button gold" href="kitchens-bathrooms.html">
+          <span>Kitchens & Bathrooms</span>
+          <small>High-end finish</small>
+        </a>
+
+        <a class="glow-button red" href="testing-certification.html">
+          <span>Testing & Certification</span>
+          <small>2391 inspection & testing</small>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust-strip">
     <div class="trust-item"><span>✓</span>Free Quotes</div>
     <div class="trust-item"><span>✓</span>Fully Qualified</div>
-    <div class="trust-item"><span>✓</span>Certification</div>
+    <div class="trust-item"><span>✓</span>Electrical Certification</div>
     <div class="trust-item"><span>✓</span>Part P Compliant Work</div>
-  </div>
+  </section>
 
   <section>
     <div class="container">
       <div class="section-title">
-        <h2>What We Do</h2>
-        <p>Premium-looking electrical and building work for domestic and commercial customers.</p>
+        <p class="eyebrow">What We Do</p>
+        <h2>Main Services</h2>
       </div>
 
-      <div class="cards">
+      <div class="cards three">
         <article class="card">
-          <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=80" alt="Rewiring work">
+          <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1000&q=80" alt="Electrical rewiring">
           <div class="card-content">
             <h3>Full & Part Rewires</h3>
-            <ul>
-              <li>Full and part rewires</li>
-              <li>Smart home automation</li>
-              <li>Safe, tidy installation</li>
-            </ul>
-            <p class="price">From <strong>£2,
+            <p>Modern wiring, neat routes, smart-home options and certification provided.</p>
+            <a href="rewires.html">View service →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1000&q=80" alt="Consumer unit upgrade">
+          <div class="card-content">
+            <h3>Consumer Units</h3>
+            <p>Safe consumer unit upgrades with RCBO and SPD options.</p>
+            <a href="consumer-units.html">View service →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1000&q=80" alt="Smart home app control">
+          <div class="card-content">
+            <h3>Smart Home</h3>
+            <p>App-controlled lighting, heating, security and modern automation.</p>
+            <a href="smart-home.html">View service →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">Reputation Builder</p>
+        <h2>Built To Convert Visitors Into Enquiries</h2>
+        <p>
+          Add your real Google reviews here once your Google Business Profile is live.
+          Reviews are one of the biggest things that turns a visitor into a customer.
+        </p>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>“Professional, tidy and reliable. Excellent finish from start to completion.”</p>
+        <strong>Example Google Review</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <h2>Need Electrical Or Building Work?</h2>
+      <p>Call, WhatsApp or send a quote request today.</p>
+      <a class="btn btn-blue" href="contact.html">Get A Free Quote</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand">SPERIN <span>SERVICES</span></div>
+      <p>Electrical & Building Solutions</p>
+      <p>Quality you can see. Service you can trust.</p>
+    </div>
+
+    <div>
+      <h3>Contact</h3>
+      <p><a href="tel:07817360156">07817 360156</a></p>
+      <p><a href="mailto:info@sperinservices.co.uk">info@sperinservices.co.uk</a></p>
+      <p>West Midlands & surrounding areas</p>
+    </div>
+
+    <div>
+      <h3>Popular Services</h3>
+      <p><a href="rewires.html">Full & Part Rewires</a></p>
+      <p><a href="consumer-units.html">Consumer Unit Upgrades</a></p>
+      <p><a href="ev-chargers.html">EV Chargers</a></p>
+      <p><a href="smart-home.html">Smart Home Automation</a></p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © <span id="year"></span> Sperin Services. All rights reserved.
+  </div>
+</footer>
+
+<a class="floating-whatsapp" href="https://wa.me/447817360156">WhatsApp</a>
+
+<script src="script.js"></script>
+</body>
+</html>
